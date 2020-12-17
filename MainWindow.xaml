@@ -1,0 +1,35 @@
+﻿<Window x:Class="DevAssessmentWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DevAssessmentWPF"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="MainWindow" Height="436.5" Width="1140.5">
+    <Grid>
+        <Button Content="Select Directory&#xD;&#xA;" HorizontalAlignment="Left" Margin="692,31,0,0" VerticalAlignment="Top" Width="120" Height="22" Click="Button_Click" RenderTransformOrigin="2.58,-12.045"/>
+        <Button Visibility="Visible" x:Name="SearchBtn" Content="Search" Margin="15,350,1016,15" Click="Button_Search" RenderTransformOrigin="0.487,0.025"/>
+        <TextBox IsReadOnly="True" x:Name="DirectoryTextBox" HorizontalAlignment="Left" Height="22" Margin="146,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="542"/>
+        <Label  Content="Directory&#xD;&#xA;" HorizontalAlignment="Left" Margin="80,28,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.967,0.298"/>
+        <DataGrid x:Name="DataGridInfo" HorizontalAlignment="Left" Height="274" Margin="10,64,0,0"  RowHeight="30" ColumnWidth="100" VerticalAlignment="Top" Width="800"/>
+        <GroupBox x:Name="StatGroupbox" Header="Statistics" HorizontalAlignment="Left" Height="166" Margin="849,16,0,0" VerticalAlignment="Top" Width="264">
+            <Label x:Name="lbl1" Content="Amount of DLLs:&#xA;" HorizontalAlignment="Left" Margin="-6,8,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.053,0.019"/>
+        </GroupBox>
+        <Label x:Name="lbl3" Content="# Dlls with Average Version:&#xD;&#xA;" HorizontalAlignment="Left" Margin="849,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.053,0.019"/>
+        <Label  x:Name="lbl2" Content="Average Version: &#xA;" HorizontalAlignment="Left" Margin="849,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.053,0.019"/>
+        <ListView x:Name="ListViewExcluded" HorizontalAlignment="Left" Height="100" Margin="849,208,0,0" VerticalAlignment="Top" Width="264" MouseDoubleClick="Remove_Directory">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btnExclude" Content="Exclude Directories&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="995,316,0,0" VerticalAlignment="Top" Width="118" Height="22" Click="Exclude_Directories" RenderTransformOrigin="2.58,-12.045"/>
+        <Label x:Name="lblexclude" Content="Excluded Directories" HorizontalAlignment="Left" Margin="849,182,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.053,0.019"/>
+        <Label x:Name="LblNumDlls" Content="" HorizontalAlignment="Left" Margin="967,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.053,0.019"/>
+        <Label x:Name="LblAverageVersion" Content="" HorizontalAlignment="Left" Margin="967,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.053,0.019"/>
+        <Label x:Name="LblNumAverageVersion" Content="" HorizontalAlignment="Left" Margin="1011,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.053,0.019"/>
+
+    </Grid>
+</Window>
