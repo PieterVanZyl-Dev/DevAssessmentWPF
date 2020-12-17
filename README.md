@@ -13,3 +13,5 @@ Here is the basic functionality without an Excluding Folders:
 Here is the same path but with an excluded path: 
 ![image](https://user-images.githubusercontent.com/20579513/102485138-df7d2400-406f-11eb-8172-df4e6a7a6264.png)
 
+You can delete items you add to the excluded path by double click on the item you'd like to delete.
+
